@@ -3,6 +3,11 @@
 *** that would make this better, please fork the repo and create a pull request
 *** or simply open an issue with the tag "enhancement".
 *** Thanks again! Now go create something AMAZING! :D
+***
+***
+***
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** ymentha14, mturk2gform, twitter_handle, yann.mentha@gmail.com, Mturk2Gform, The flexibility of Google forms on Amazon MTurk
 -->
 
 
@@ -26,24 +31,25 @@
 
 <!-- PROJECT LOGO -->
 <br />
+  <h1 align="center">Mturk2Gform</h1>
+
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/ymentha14/mturk2gform">
+    <img src="images/mt2gf.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    The flexibility of Google forms on Amazon MTurk
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ymentha14/mturk2gform"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/ymentha14/mturk2gform">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/ymentha14/mturk2gform/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/ymentha14/mturk2gform/issues">Request Feature</a>
   </p>
 </p>
 
@@ -51,102 +57,184 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#do-you-need-it">Do you need it?</a></li>
+        <li><a href="#what-is-it">What is it?</a></li>
+        <li><a href="#what-is-it-not">What is it not?</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#1-prerequisites">Prerequisites</a></li>
+        <li><a href="#2-installation">Installation</a></li>
+        <li><a href="#3-credentials-settings">Credentials Settings</a></li>
+        <li><a href="#4-forms-generation">Forms Generation</a></li>
+      </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+## About the Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+### Do you need it?
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+✔️ You need to gather a big amount of human-labeled data.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+✔️ This data should be answered on distinct forms following all a similar template, but with different questions each (image description for instance)
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+✔️You want to limit the number of workers answering a given form in order to guarantee diversity amongst your data source
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+If you still are still reading, chances are that Mturk2gform will help you saving some work/time!
 
-### Built With
+### What is it?
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+Mturk2Gform lets you easily link  a set of generated [Google forms](https://www.google.com/forms/about/) to [Amazon Mechanical Turk ](https://www.mturk.com/)HITs, taking advantage of both frameworks benefits:
+
+* The generative capability of [Google Appscript](https://developers.google.com/apps-script/reference/forms) to automate personalized Google forms creation.
+* The robust features of Amazon MTurk to control task scheduling and workers payment.
+
+### What is it not?
+Mturk2Gform does not aim at replacing one or the other frameworks, but rather to **provide the user with a quick, scalable and reliable solution to automate human-labeled data gathering from google forms.**
+
+It consists of a wrapper class around the [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/mturk.html) library and various functionalities from [Google python client](https://github.com/googleapis/google-api-python-client)
+
+
+
+*Disclaimer: Although MTurk already provides the user with forms to gather data, its features are somehow limited in comparison with what can be done in Google Forms, in particular when it comes to generate a big number of these forms. (image integration, easy linkage with other drive documents etc.)*
+<!-- ### Built With
+
+* []()
+* []()
+* []() -->
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+Mturk2Gform provides you with 3 levels of control on the Mturk HITs dependingon your needs:
+
+* **High-level interface**: a control panel based on [Ipywidgets](https://ipywidgets.readthedocs.io/en/latest/) which lets you create, list, stop delete and monitor hits conveniently
+![Alt Text](images/demo.gif)
+
+* **Mid-level interface**: The Object-Oriented implementation of Mturk2Gform presents some extra methods in addition to the control panel
+* **Low-level interface**: every Mturk2Gform instance gives you full access to the underlying Mturk `boto3` client as an instance attribute: if some functionalities are missing, you can always complete them on the fly.
+
+In addition to these three levels of control, Mturk2Gform provides you with some extra features not present in Mturk or Google Forms:
+
+* **Monitoring of HITs**: you can limit the number of forms one worker can answer among your Google forms set
+
+* **Template Appscript**: to automatize the generation of ilimited number of personalized Google Forms
+
+* **Confirmation Code**: Although this feature is not native to google forms, Mturk2Gform implements a confirmation code features ensuring that workers indeed completed your forms
+
+
+For other examples and features, please refer to the [Documentation](https://example.com)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### 1. Prerequisites
 
-### Prerequisites
+```
+python >= 3.6
+```
+<!-- or
+```
+docker >= 3.6
+``` -->
+### 2. Installation
+Using pip
+```sh
+pip install mt2gf
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+```
+<!-- 
+Using docker
+```sh
+docker run mt2gf -v TODO: complete
+``` -->
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Cloning the repo
+```sh
+git clone https://github.com/ymentha14/mturk2gform.git
+```
+### 3. Credentials Settings
 
-### Installation
+#### Amazon Credentials
+It is assumed that you already possess an AWS account: if this is not the case you can set it up [here](TODO:complete)
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Once this is done, you need to download your public and secret key into a .csv file as described [here](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html#get-access-keys). These keys will allow mt2gf to connect to your AWS account and help you managing the HITs.
 
+#### Google Credentials
+You need to set up the Google [People API](https://developers.google.com/people/quickstart/python) associated with your Google Drive account to establish the link with Mturk2Gform: once you are done, you can save the `credentials.json` file.
 
+### 4. Forms Generation
+### Google Appscript
+Mt2gf assumes you generated a serie of google forms (for ex. using [Appscript](https://developers.google.com/apps-script/reference/forms) ) present on a Google Drive folder along with a `gform_mapping.txt` file whose rows respect the following structure:
+```
+<form index>,<url to form>,<url to form spreadsheet>
+```
+Tipp: An [Appscript template]() is provided to help you creating the form and linking the forms to their respective spreadsheets.
 
-<!-- USAGE EXAMPLES -->
-## Usage
+#### MTurk HIT Layout
+The MTurk layout will have to describe what your task consists in: it is on this layout that the url to the google form wil appear. To make this hitlayout compatible with Mturk2gform, enter `${url}` where you want the link to appear. (Detailed explanations [here](https://blog.mturk.com/tutorial-editing-your-task-layout-5cd88ccae283)). Save the changes, selet your task and save the hitlayout_id that shows up when clicking on your task:
+![Alt Text](images/hitlayout.png)
+___
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Once these 4 steps are done, you can start running a [template mt2gf notebook]() with your own data to familiarize with the framework.
 
 
 
-<!-- ROADMAP -->
-## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+
+Project Structure
+------------
+
+
+    ├── LICENSE
+    ├── README.md <-- The README you're currently reading
+    ├── Dockerfile <-- Dockerfile
+    ├── requirements.txt <-- python packages required for mt2gf
+    ├── setup.py <-- setuptools script
+    ├── bash_scripts
+    │   └── jupy_ext.sh <-- Script to install IPywidgets extensions
+    ├── docs <-- Sphinx documentation ofthe project
+    ├── Makefile
+    ├── mt2gf
+    │   ├── appscript
+    │   │   ├── appscript_template.js
+    │   │   └── mouse_clicker_appscript.sh
+    │   ├── auto_drive.py
+    │   ├── auto_mturk.py
+    │   ├── constants.py
+    │   ├── fraudulous.py
+    │   ├── preprocess.py
+    │   ├── turk_widgets.py
+    │   ├── utils.py
+    │   └── watcher.py
+    ├── notebooks
+    │   └── HIT_generator.ipynb
+    ├── test_environment.py
+    └── tox.ini
+
+
+--------
+
+
+
+
 
 
 
@@ -173,25 +261,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name  - yann.mentha@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ymentha14/mturk2gform](https://github.com/ymentha14/mturk2gform)
 
 
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
 
 
@@ -199,16 +273,15 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ymentha14/repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/ymentha14/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ymentha14/repo.svg?style=for-the-badge
+[forks-url]: https://github.com/ymentha14/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/ymentha14/repo.svg?style=for-the-badge
+[stars-url]: https://github.com/ymentha14/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ymentha14/repo.svg?style=for-the-badge
+[issues-url]: https://github.com/ymentha14/repo/issues
+[license-shield]: https://img.shields.io/github/license/ymentha14/repo.svg?style=for-the-badge
+[license-url]: https://github.com/ymentha14/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://linkedin.com/in/ymentha14
