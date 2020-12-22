@@ -19,7 +19,7 @@ def get_drive_service(creds_dir):
 
     Args:
         creds_dir (pathlib.Path): path to directory containing the credentials.json.
-        Instructions to obtain such a file are available  `here <https://developers.google.com/people/quickstart/python/>`
+        Instructions to obtain such a file are available here https://developers.google.com/people/quickstart/python/
 
     Returns:
         [googleapiclient.discovery.Resource]: service object to Google Drive
@@ -93,8 +93,8 @@ def get_gform_map(service, gform_map_id, gform_map_path):
 
     Returns:
         [dict]: dictionary mapping to each form index the url to the corresponding
-    form ('url' key) and the drive id pointing to the spreadsheet containing the results of this form
-    ('driveid' key).
+        form ('url' key) and the drive id pointing to the spreadsheet containing the results of this form
+        ('driveid' key).
     """
     download_drive_txt(
         gform_map_path, gform_map_id, service
@@ -156,8 +156,8 @@ def download_multi_csv(gform_map, result_dir, service):
 
     Args:
         gform_map (dict): dictionary mapping to each form index the url to the corresponding
-    form ('url' key) and the drive id pointing to the spreadsheet containing the results of this form
-    ('driveid' key).
+        form ('url' key) and the drive id pointing to the spreadsheet containing the results of this form
+        ('driveid' key).
         result_dir (str): directory where to download the results.
         service (googleapiclient.discovery.Resource]): as returned by get_drive_service
     """

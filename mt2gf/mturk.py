@@ -1,6 +1,8 @@
 """
-Script to automate the creation of MTURK task: this assumes you did run the app script
-generating the forms and their associate file previously.
+Script to automate the creation and handling of MTurk task: it assumes you have a gform_map.txt file
+pointing to Google forms as describe in the README.
+
+
 """
 import pickle as pk
 from datetime import datetime

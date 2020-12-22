@@ -1,23 +1,14 @@
-# local package
-setuptools==50.3.0
--e .
-
-# external requirements
-jupyterlab==2.2.9
+setuptools>=50.3.0
+jupyterlab>=2.2.9
 ipykernel
-pandas==1.1.2
-boto3==1.16.25
-xmltodict==0.12.0
-google-auth
-google-api-python-client
-google-auth-oauthlib
-ipywidgets==7.5.1
-jdc
-numpy==1.16.4
-matplotlib==3.3.2
-scikit-learn==0.23.2
-tqdm==4.51.0
-seaborn==0.11.0
-fuzzywuzzy==0.18.0
-python-Levenshtein==0.12.0
+pandas>=1.1.2
+boto3>=1.16.25
+xmltodict>=0.12.0
+google-auth>=1.24.0
+google-api-python-client>=1.12.8
+google-auth-oauthlib>=0.4.2
+ipywidgets>=7.5.1
+numpy>=1.16.4
+tqdm>=4.51.0
+python-Levenshtein>=0.12.0
 
