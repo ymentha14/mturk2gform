@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mt2gf package &mdash; Mturk2gform  documentation</title>
+  <title>mt2gf package &mdash; Mturk2Gform  documentation</title>
   
 
   
@@ -36,7 +36,6 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="mt2gf.data package" href="mt2gf.data.html" />
     <link rel="prev" title="mt2gf" href="modules.html" /> 
 </head>
 
@@ -51,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Mturk2gform
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Mturk2Gform
           
 
           
@@ -86,14 +85,13 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">mt2gf</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">mt2gf package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mt2gf.data.html">mt2gf.data package</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.constants">mt2gf.constants module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.turk_widgets">mt2gf.turk_widgets module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.gform">mt2gf.gform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.mturk">mt2gf.mturk module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.preprocess">mt2gf.preprocess module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.utils">mt2gf.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.watcher">mt2gf.watcher module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mt2gf.widgets">mt2gf.widgets module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-mt2gf">Module contents</a></li>
 </ul>
 </li>
@@ -114,7 +112,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Mturk2gform</a>
+          <a href="index.html">Mturk2Gform</a>
         
       </nav>
 
@@ -168,39 +166,448 @@
             
   <div class="section" id="mt2gf-package">
 <h1>mt2gf package<a class="headerlink" href="#mt2gf-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mt2gf.data.html">mt2gf.data package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#module-mt2gf.data.auto_drive">mt2gf.data.auto_drive module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#module-mt2gf.data.auto_mturk">mt2gf.data.auto_mturk module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#mt2gf-data-fraudulous-module">mt2gf.data.fraudulous module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#module-mt2gf.data.preprocess">mt2gf.data.preprocess module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#mt2gf-data-watcher-module">mt2gf.data.watcher module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mt2gf.data.html#module-mt2gf.data">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-mt2gf.constants">
-<span id="mt2gf-constants-module"></span><h2>mt2gf.constants module<a class="headerlink" href="#module-mt2gf.constants" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-mt2gf.turk_widgets">
-<span id="mt2gf-turk-widgets-module"></span><h2>mt2gf.turk_widgets module<a class="headerlink" href="#module-mt2gf.turk_widgets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-mt2gf.gform">
+<span id="mt2gf-gform-module"></span><h2>mt2gf.gform module<a class="headerlink" href="#module-mt2gf.gform" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="mt2gf.turk_widgets.get_control_panel">
-<code class="sig-prename descclassname">mt2gf.turk_widgets.</code><code class="sig-name descname">get_control_panel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turk</span></em>, <em class="sig-param"><span class="n">gform_map_id</span></em>, <em class="sig-param"><span class="n">monitor_qualif_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_forms_per_worker</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.turk_widgets.get_control_panel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Displays the most important features from the Turker through an Ipywidgets
-control panel in the jupyer notebook</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>turk (mt2gf.Turker): the Turker instance that will handle the actions
-gform_map_id (str): google drive id of the google forms mapping file</p>
+<dt id="mt2gf.gform.download_csv">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">download_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_path</span></em>, <em class="sig-param"><span class="n">fileId</span></em>, <em class="sig-param"><span class="n">service</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.download_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download the spreadsheet result of a form as a csv file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csv_path</strong> (<em>str</em>) – path where to store a local .csv version of the spreadsheet</p></li>
+<li><p><strong>fileId</strong> (<em>str</em>) – drive id of the spreadsheet</p></li>
+<li><p><strong>service</strong> (<em>googleapiclient.discovery.Resource</em><em>]</em>) – as returned by get_drive_service</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.gform.download_drive_txt">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">download_drive_txt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gform_map_path</span></em>, <em class="sig-param"><span class="n">gform_map_id</span></em>, <em class="sig-param"><span class="n">service</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.download_drive_txt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download the gform_map file to the provided path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gform_map_path</strong> (<em>str</em>) – path where to store a local version of the gform_map</p></li>
+<li><p><strong>gform_map_id</strong> (<em>str</em>) – gdrive id of the gform_map</p></li>
+<li><p><strong>service</strong> (<em>gdrive service</em>) – as returned by get_drive_service</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.gform.download_multi_csv">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">download_multi_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gform_map</span></em>, <em class="sig-param"><span class="n">result_dir</span></em>, <em class="sig-param"><span class="n">service</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.download_multi_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over the forms present in the gform_map and sequentially calls download_csv
+on, downloading their respective most recent version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gform_map</strong> (<em>dict</em>) – dictionary mapping to each form index the url to the corresponding</p></li>
+<li><p><strong>form</strong> (<em>'url' key</em>) – </p></li>
+<li><p><strong>key</strong><strong>)</strong><strong></strong> (<em>(</em><em>'driveid'</em>) – </p></li>
+<li><p><strong>result_dir</strong> (<em>str</em>) – directory where to download the results.</p></li>
+<li><p><strong>service</strong> (<em>googleapiclient.discovery.Resource</em><em>]</em>) – as returned by get_drive_service</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.gform.get_batch_gform_map">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">get_batch_gform_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service</span></em>, <em class="sig-param"><span class="n">file_id</span></em>, <em class="sig-param"><span class="n">gform_map_path</span></em>, <em class="sig-param"><span class="n">form_indexes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.get_batch_gform_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in case of batched dataset gathering.
+Returns the subpart of gform_map specific to the form_indexes passed in parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> (<em>googleapiclient.discovery.Resource</em>) – as returned by get_drive_service</p></li>
+<li><p><strong>gform_map_id</strong> (<em>str</em>) – drive_id of the gform_map file. This file must respect the following structure:</p></li>
+<li><p><strong>index&gt;</strong> (<em>&lt;form</em>) – </p></li>
+<li><p><strong>to form&gt;</strong> (<em>&lt;url</em>) – </p></li>
+<li><p><strong>to form spreadsheet&gt;</strong> (<em>&lt;url</em>) – </p></li>
+<li><p><strong>gform_map_path</strong> (<em>str</em>) – path where to store a local version of the gform_map.txt file</p></li>
+<li><p><strong>form_indexes</strong> (<em>list of int</em>) – indexes of the forms for the current batch</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.gform.get_drive_service">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">get_drive_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">creds_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.get_drive_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the drive service for files downloading.
+Inspired from <a class="reference external" href="https://developers.google.com/people/quickstart/python">https://developers.google.com/people/quickstart/python</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>creds_dir</strong> (<em>pathlib.Path</em>) – path to directory containing the credentials.json.</p></li>
+<li><p><strong>to obtain such a file are available here https</strong> (<em>Instructions</em>) – //developers.google.com/people/quickstart/python/</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service object to Google Drive</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[googleapiclient.discovery.Resource]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.gform.get_gform_map">
+<code class="sig-prename descclassname">mt2gf.gform.</code><code class="sig-name descname">get_gform_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service</span></em>, <em class="sig-param"><span class="n">gform_map_id</span></em>, <em class="sig-param"><span class="n">gform_map_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.gform.get_gform_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the gform_map,i.e. a dictionary mapping to each form index the url to the corresponding
+form (‘url’ key) and the drive id pointing to the spreadsheet containing the results of this form
+(‘driveid’ key).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> (<em>googleapiclient.discovery.Resource</em>) – as returned by get_drive_service</p></li>
+<li><p><strong>gform_map_id</strong> (<em>str</em>) – drive_id of the gform_map file. This file must respect the following structure:</p></li>
+<li><p><strong>index&gt;</strong> (<em>&lt;form</em>) – </p></li>
+<li><p><strong>to form&gt;</strong> (<em>&lt;url</em>) – </p></li>
+<li><p><strong>to form spreadsheet&gt;</strong> (<em>&lt;url</em>) – </p></li>
+<li><p><strong>gform_map_path</strong> (<em>str</em>) – path where to store a local version of the gform_map.txt file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary mapping to each form index the url to the corresponding
+form (‘url’ key) and the drive id pointing to the spreadsheet containing the results of this form
+(‘driveid’ key).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mt2gf.mturk">
+<span id="mt2gf-mturk-module"></span><h2>mt2gf.mturk module<a class="headerlink" href="#module-mt2gf.mturk" title="Permalink to this headline">¶</a></h2>
+<p>Script to automate the creation and handling of MTurk task: it assumes you have a gform_map.txt file
+pointing to Google forms as describe in the README.</p>
+<dl class="py class">
+<dt id="mt2gf.mturk.MTurkParam">
+<em class="property">class </em><code class="sig-prename descclassname">mt2gf.mturk.</code><code class="sig-name descname">MTurkParam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_key_path</span></em>, <em class="sig-param"><span class="n">hit_layout</span></em>, <em class="sig-param"><span class="n">MaxAssignments</span></em>, <em class="sig-param"><span class="n">LifetimeInDays</span></em>, <em class="sig-param"><span class="n">AutoApprovalDelayInDays</span></em>, <em class="sig-param"><span class="n">AssignmentDurationInSeconds</span></em>, <em class="sig-param"><span class="n">QualificationRequirements</span></em>, <em class="sig-param"><span class="n">Reward</span></em>, <em class="sig-param"><span class="n">HITTitle</span></em>, <em class="sig-param"><span class="n">Keywords</span></em>, <em class="sig-param"><span class="n">Description</span></em>, <em class="sig-param"><span class="n">production</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.MTurkParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Parameter object for the Turker instances: all parameters in ThisFormat
+end up in boto3 call, in contrast to this_format, used for other tasks.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="mt2gf.mturk.Turker">
+<em class="property">class </em><code class="sig-prename descclassname">mt2gf.mturk.</code><code class="sig-name descname">Turker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">meta_dir</span></em>, <em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">gservice</span></em>, <em class="sig-param"><span class="n">gform_map</span></em>, <em class="sig-param"><span class="n">formresdir</span></em>, <em class="sig-param"><span class="n">conf_code_generator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frauder_callbacks</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">check_conf_code</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">check_code_frauders</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to perform</p>
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.approve_all_assignments">
+<code class="sig-name descname">approve_all_assignments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hit_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.approve_all_assignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approve all assignments corresponding to the provided HIT id, regardless of
+their validity (No quality check or callbacks performed)
+If you wish to perform quality_check, cf approve_correct_assignments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correct_hits</strong> (<em>Bool</em>) – whether to correct correct hits exclusively</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.approve_all_hits">
+<code class="sig-name descname">approve_all_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.approve_all_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approve all assignments of all HITs regardless of their validity (No quality
+check or callbacks performed)
+If you wish to perform quality_check, cf approve_correct_assignments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.approve_correct_assignments">
+<code class="sig-name descname">approve_correct_assignments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hit_id</span></em>, <em class="sig-param"><span class="n">callbacks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_code_frauders</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dry_run</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.approve_correct_assignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approve assignments in Reviewable state corresponding to the provided HIT id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hit_id</strong> (<em>str</em>) – MTurk HIT id</p></li>
+<li><p><strong>callbacks</strong> (<em>list of func</em>) – If value is set, overrides self.frauder_callbacks.</p></li>
+<li><p><strong>of functions detecting frauders</strong> (<em>List</em>) – </p></li>
+<li><p><strong>is WorkerIDs that need to be rejected</strong> (<em>that</em>) – </p></li>
+<li><p><strong>a given HIT. Each such function takes as single argument a pd.DataFrame corresponding to this HIT as returned by mt2gf.Turker.get_results</strong> (<em>for</em>) – </p></li>
+<li><p><strong>is</strong> (<em>(</em><em>that</em>) – </p></li>
+<li><p><strong>pd.DataFrame whose columns are equal to the google forms questions fields</strong><strong>) </strong><strong>and returns a set of string consisting</strong> (<em>a</em>) – </p></li>
+<li><p><strong>the Worker IDs whose Assignment must be rejected for the given HIT.</strong> (<em>of</em>) – </p></li>
+<li><p><strong>check_code_frauders</strong> (<em>Bool</em>) – If value is set, overrides self.check_code_frauders. When set to True, will reject any WorkerId present</p></li>
+<li><p><strong>an MTurk HIt but absent of the Google form. This makes sure that no HIT will be validated without data in the Google Form.</strong> (<em>in</em>) – </p></li>
+<li><p><strong>NB</strong> – Worker entering a malformed ID are rejected as well</p></li>
+<li><p><strong>dry_run</strong> (<em>Bool</em>) – if set to True, no HIT will be effectively validated or rejected: the output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.approve_correct_hits">
+<code class="sig-name descname">approve_correct_hits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dry_run</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.approve_correct_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approve all the HITs that don’t violate any of the callback functions, reject the others.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dry_run</strong> (<em>Bool</em>) – if set to True, no HIT will be effectively validated or rejected: the output</p></li>
+<li><p><strong>the same for pre-checking the effect of a wet run.</strong> (<em>remains</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.create_forms_hits">
+<code class="sig-name descname">create_forms_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.create_forms_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate and publish the HITs corresponding to the forms whose index
+are present in Turker.gform_map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.delete_all_hits">
+<code class="sig-name descname">delete_all_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.delete_all_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all HITs having been been reviewed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.delete_hit">
+<code class="sig-name descname">delete_hit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hit_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.delete_hit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the hit hit_id from the Mturk platform.
+Fails in case the hit is not reviewed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hit_id</strong> (<em>str</em>) – Mturk HIT id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.get_results">
+<code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download and return the most recent version of the Google Forms results corresponding to id (HITid or Google form index)
+as a pd.Dataframe ()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em><em> or </em><em>str</em>) – if int, must correspond to the index of the Google form. If string, must correspond to a valid HIT id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>results: data filled by the MTurk Workers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.list_all_assignments">
+<code class="sig-name descname">list_all_assignments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.list_all_assignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all assignments for all hits. Cf Turker.list_assignments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Concatenation of the dataframe returned by list_assignments for all HITs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.list_assignments">
+<code class="sig-name descname">list_assignments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hit_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.list_assignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the assignments corresponding to the given hit_id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hit_id</strong> (<em>str</em>) – MTurk valid HIT id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Columns WorkerId,HITId,FormId,ConfCode,AcceptTime,SubmitTime,TrueConfCode,Status</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.list_hits">
+<code class="sig-name descname">list_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.list_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Published HITs informations: HITId,Status,Completed,Percent_completed
+Completed designates the number of completed forms for the given HIT.
+Once Percent_completed reaches 100, the HIT status becomes “Assignable”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dataframe with HITId,Status,Completed,Percent_completed columns</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.list_reviewable_hits">
+<code class="sig-name descname">list_reviewable_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.list_reviewable_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the HITs in a reviwable state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.save_worker_infos">
+<code class="sig-name descname">save_worker_infos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.save_worker_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the workers metadata (completion time etc)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – directory in which the worker infos will be saved. Defaults</p></li>
+<li><p><strong>the formresdir directory.</strong> (<em>to</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.stop_all_hits">
+<code class="sig-name descname">stop_all_hits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.stop_all_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call Turker.stop_hit for every hit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.mturk.Turker.stop_hit">
+<code class="sig-name descname">stop_hit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hit_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.Turker.stop_hit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the expiration date of the hit at a past date.
+This allows the assignable hits to go to “Reviewable”
+state as soon as possible (lets the workers already working
+finish their task first)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.mturk.create_mturk_client">
+<code class="sig-prename descclassname">mt2gf.mturk.</code><code class="sig-name descname">create_mturk_client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_access_key_id</span></em>, <em class="sig-param"><span class="n">aws_secret_access_key</span></em>, <em class="sig-param"><span class="n">production</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.create_mturk_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an MTURK client.
+Inspired from <a class="reference external" href="https://blog.mturk.com/tutorial-mturk-using-python-in-jupyter-notebook-17ba0745a97f">https://blog.mturk.com/tutorial-mturk-using-python-in-jupyter-notebook-17ba0745a97f</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aws_access_key_id</strong> (<em>str</em>) – aws key</p></li>
+<li><p><strong>aws_secret_access_key</strong> (<em>str</em>) – secret aws key</p></li>
+<li><p><strong>production</strong> (<em>Bool</em>) – sandbox if set to false</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>low level boto3 object allowing for HITs manipulation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>client (boto3.client)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.mturk.get_answer">
+<code class="sig-prename descclassname">mt2gf.mturk.</code><code class="sig-name descname">get_answer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">answer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.mturk.get_answer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the text out of an answer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>answer</strong> (<em>dict</em>) – as returned by Assignment[‘Answer’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mt2gf.preprocess">
+<span id="mt2gf-preprocess-module"></span><h2>mt2gf.preprocess module<a class="headerlink" href="#module-mt2gf.preprocess" title="Permalink to this headline">¶</a></h2>
+<p>Preprocessing functions before mturk data gathering</p>
+<dl class="py function">
+<dt id="mt2gf.preprocess.batchnumber2formidxes">
+<code class="sig-prename descclassname">mt2gf.preprocess.</code><code class="sig-name descname">batchnumber2formidxes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_number</span></em>, <em class="sig-param"><span class="n">batch_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.preprocess.batchnumber2formidxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a batch number to its respective form indexes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_number</strong> (<em>int</em>) – index of the batch</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – size of the batch</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.preprocess.check_is_complete">
+<code class="sig-prename descclassname">mt2gf.preprocess.</code><code class="sig-name descname">check_is_complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch_path</span></em>, <em class="sig-param"><span class="n">MaxAssignments</span></em>, <em class="sig-param"><span class="n">batch_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.preprocess.check_is_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>check that the batch present at batch_path follows some structure:
+i.e. has batch_size files and each file has at least MaxAssignments rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_path</strong> (<em>str</em>) – path where to store the results of the batch</p></li>
+<li><p><strong>MaxAssignments</strong> (<em>int</em>) – total number of worker answer expected per form</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – number of forms to get ansewred per batch</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.preprocess.check_previous_batches">
+<code class="sig-prename descclassname">mt2gf.preprocess.</code><code class="sig-name descname">check_previous_batches</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">recent_batch_number</span></em>, <em class="sig-param"><span class="n">parent_dir</span></em>, <em class="sig-param"><span class="n">MaxAssignments</span></em>, <em class="sig-param"><span class="n">batch_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.preprocess.check_previous_batches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the number of files and their size in all previous batches up to
+current batch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>recent_bach_number</strong> (<em>int</em>) – most recent batch (not included)</p></li>
+<li><p><strong>parent_dir</strong> (<em>pathlib.Path</em>) – parent directory in containing the batches</p></li>
+<li><p><strong>MaxAssignments</strong> (<em>int</em>) – total number of worker answer expected per form</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – number of forms to get ansewred per batch</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.preprocess.create_batch_directories">
+<code class="sig-prename descclassname">mt2gf.preprocess.</code><code class="sig-name descname">create_batch_directories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span></em>, <em class="sig-param"><span class="n">n_dirs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.preprocess.create_batch_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>create the directories to receive the results from the batches</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>pathlib.Path</em>) – directory in which create the batches directories</p></li>
+<li><p><strong>n_dirs</strong> (<em>int</em>) – number of directories to create</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mt2gf.preprocess.get_batch_indexes">
+<code class="sig-prename descclassname">mt2gf.preprocess.</code><code class="sig-name descname">get_batch_indexes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent_dir</span></em>, <em class="sig-param"><span class="n">batch_number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">7</span></em>, <em class="sig-param"><span class="n">MaxAssignments</span><span class="o">=</span><span class="default_value">30</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.preprocess.get_batch_indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get the next batch information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_size</strong> (<em>int</em>) – number of forms per batch</p></li>
+<li><p><strong>batch_number</strong> (<em>int</em>) – number of the batch to get indexes for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>directory where to store the results of the batch
+[int]: index of the batch
+[list of int]: indexes of the forms to run the analysis for</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[pathlib.Path]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -210,38 +617,201 @@ gform_map_id (str): google drive id of the google forms mapping file</p>
 <span id="mt2gf-utils-module"></span><h2>mt2gf.utils module<a class="headerlink" href="#module-mt2gf.utils" title="Permalink to this headline">¶</a></h2>
 <p>misc utilities functions</p>
 <dl class="py function">
-<dt id="mt2gf.utils.create_batch_directories">
-<code class="sig-prename descclassname">mt2gf.utils.</code><code class="sig-name descname">create_batch_directories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span></em>, <em class="sig-param"><span class="n">n_dirs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.utils.create_batch_directories" title="Permalink to this definition">¶</a></dt>
-<dd><p>create the directories to receive the results from the batches</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>directory (pathlib.Path): directory in which create the batches directories
-n_dirs (int): number of directories to create</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="mt2gf.utils.get_batch_form_urls">
-<code class="sig-prename descclassname">mt2gf.utils.</code><code class="sig-name descname">get_batch_form_urls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service</span></em>, <em class="sig-param"><span class="n">file_id</span></em>, <em class="sig-param"><span class="n">form_indexes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.utils.get_batch_form_urls" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns the subpart of the formidx2url and formidx2gid
-specific to the form_indexes passed in parameter</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="mt2gf.utils.get_form_urls">
-<code class="sig-prename descclassname">mt2gf.utils.</code><code class="sig-name descname">get_form_urls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service</span></em>, <em class="sig-param"><span class="n">file_id</span></em>, <em class="sig-param"><span class="n">url_index_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.utils.get_form_urls" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt id="mt2gf.utils.read_access_keys">
 <code class="sig-prename descclassname">mt2gf.utils.</code><code class="sig-name descname">read_access_keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.utils.read_access_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read the AWS keys at the given file_path</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>file_path (str): path to the AWS access key file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – path to the AWS access key file</p>
 </dd>
+</dl>
+<dl class="simple">
 <dt>Return</dt><dd><p>[str],[str]: the access key and the secret access key</p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mt2gf.watcher">
+<span id="mt2gf-watcher-module"></span><h2>mt2gf.watcher module<a class="headerlink" href="#module-mt2gf.watcher" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mt2gf.watcher.Watcher">
+<em class="property">class </em><code class="sig-prename descclassname">mt2gf.watcher.</code><code class="sig-name descname">Watcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">form_results_dir</span></em>, <em class="sig-param"><span class="n">gform_map</span></em>, <em class="sig-param"><span class="n">drive_service</span></em>, <em class="sig-param"><span class="n">aws_key_path</span></em>, <em class="sig-param"><span class="n">qualification_type_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">qualification_description</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">qualification_type_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_forms_per_worker</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">production</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to monitor the workers who answer more than max_forms_per_worker forms
+in the pool. Once a worker reaches this limit, the watcher class who runs a subprocess
+tag the worker by granting him/her with an MTurk qualification that will prevent him/her
+to find any other form associated with the current pool.</p>
+<p>This allows to guarantee a certain MTurk workers diversity in the pool answerers.</p>
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.get_qualif_requirement">
+<code class="sig-name descname">get_qualif_requirement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.get_qualif_requirement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the qualification requirement associated with the current watcher.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Qualification Requirement as in the boto3 nomenclature</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.get_tagged_workers">
+<code class="sig-name descname">get_tagged_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.get_tagged_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the set of Workerid that are already tagged</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>tagged workers ids</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[set of str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.get_workers2tag">
+<code class="sig-name descname">get_workers2tag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.get_workers2tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the set of workerid that need to get tagged</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of Worker Id that need to be tagged in order not to
+find any more forms from the pool in their MTurk searche</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[set of str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.monitor">
+<code class="sig-name descname">monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sleep_time</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to run in detached thread: checks periodically for new workers to tag
+Downloads at each iteration the most recent version of the results for the current batch’s
+forms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sleep_time</strong> (<em>int</em>) – time to sleep at each iteration</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.start_monitor">
+<code class="sig-name descname">start_monitor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.start_monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detaches a thread executing the Watcher.monitor function if no thread is already running.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.stop_monitor">
+<code class="sig-name descname">stop_monitor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.stop_monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the thread executing the Watcher.monitor function if such a thread is running.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.watcher.Watcher.untag_all_workers">
+<code class="sig-name descname">untag_all_workers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.watcher.Watcher.untag_all_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Untag all workers tagged with the qualification type associated with the Watcher</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mt2gf.widgets">
+<span id="mt2gf-widgets-module"></span><h2>mt2gf.widgets module<a class="headerlink" href="#module-mt2gf.widgets" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mt2gf.widgets.ControlPanel">
+<em class="property">class </em><code class="sig-prename descclassname">mt2gf.widgets.</code><code class="sig-name descname">ControlPanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turk</span></em>, <em class="sig-param"><span class="n">watcher</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Ipywidgets panel allowing high-level control of the HITs creation,confirmation
+validation and deletion along with monitoring of number of HITs per worker</p>
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.approve_all">
+<code class="sig-name descname">approve_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.approve_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.approve_correct">
+<code class="sig-name descname">approve_correct</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.approve_correct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.approve_correct_dry">
+<code class="sig-name descname">approve_correct_dry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.approve_correct_dry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call Turker.approve_correct_hits: this</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.create_hits">
+<code class="sig-name descname">create_hits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.create_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate and publish the HITs tasks as described by turk.gform_map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.delete_all_hits">
+<code class="sig-name descname">delete_all_hits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.delete_all_hits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.display_panel">
+<code class="sig-name descname">display_panel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.display_panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the most important features from the Turker through an Ipywidgets
+control panel in the jupyer notebook</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>turk</strong> (<em>mt2gf.Turker</em>) – the Turker instance that will handle the actions</p></li>
+<li><p><strong>gform_map_id</strong> (<em>str</em>) – google drive id of the google forms mapping file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.list_assignments">
+<code class="sig-name descname">list_assignments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.list_assignments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.list_hits">
+<code class="sig-name descname">list_hits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.list_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Button: List the published HITs. Completed designates the number of completed
+forms for the given HIT. Once Percent_completed reaches 100, the HIT status becomes “Assignable”</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.results_hitid_formidx">
+<code class="sig-name descname">results_hitid_formidx</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sender</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.results_hitid_formidx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.start_monitor">
+<code class="sig-name descname">start_monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.start_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.stop_all_hits">
+<code class="sig-name descname">stop_all_hits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.stop_all_hits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.stop_monitor">
+<code class="sig-name descname">stop_monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.stop_monitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.tagged_workers">
+<code class="sig-name descname">tagged_workers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.tagged_workers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mt2gf.widgets.ControlPanel.untag_all_workers">
+<code class="sig-name descname">untag_all_workers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mt2gf.widgets.ControlPanel.untag_all_workers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -257,8 +827,6 @@ specific to the form_indexes passed in parameter</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mt2gf.data.html" class="btn btn-neutral float-right" title="mt2gf.data package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="modules.html" class="btn btn-neutral float-left" title="mt2gf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

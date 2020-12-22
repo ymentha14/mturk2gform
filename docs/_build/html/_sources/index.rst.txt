@@ -1,9 +1,9 @@
-.. Mturk2gform documentation master file, created by
-   sphinx-quickstart on Sat Dec 19 20:18:36 2020.
+.. Mturk2Gform documentation master file, created by
+   sphinx-quickstart on Mon Dec 21 19:55:43 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Mturk2gform's documentation!
+Welcome to Mturk2Gform's documentation!
 =======================================
 
 .. toctree::
