@@ -1,20 +1,4 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** ymentha14, mturk2gform, twitter_handle, yann.mentha@gmail.com, Mturk2Gform, The flexibility of Google forms on Amazon MTurk
--->
-
-
-
-
-
-<!-- PROJECT LOGO -->
+!-- PROJECT LOGO -->
 <br />
   <h1 align="center">Mturk2Gform</h1>
 
@@ -97,12 +81,9 @@ It consists of a wrapper class around the [boto3](https://boto3.amazonaws.com/v1
 
 
 *Disclaimer: Although MTurk already provides the user with forms to gather data, its features are somehow limited in comparison with what can be done in Google Forms, in particular when it comes to generate a big number of these forms. (image integration, easy linkage with other drive documents etc.)*
-<!-- ### Built With
 
-* []()
-* []()
-* []() -->
 
+![Alt Text](images/mt2gf_plan.png)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
